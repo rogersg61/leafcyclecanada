@@ -46,6 +46,9 @@
         html { scroll-behavior: smooth; }
         /* Custom styles for inequalities block to look like math */
         .math-font { font-family: 'Courier New', Courier, monospace; }
+        /* Hide default detail marker for a cleaner look */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
     </style>
 </head>
 <body class="bg-earth-100 text-earth-900 font-sans antialiased selection:bg-leaf-300 selection:text-leaf-900">
@@ -61,12 +64,13 @@
                     </svg>
                     <span class="font-serif font-bold text-2xl text-leaf-800 tracking-tight">LeafCycle</span>
                 </div>
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#process" class="text-earth-800 hover:text-leaf-600 transition font-medium">Our Process</a>
-                    <a href="#products" class="text-earth-800 hover:text-leaf-600 transition font-medium">Products</a>
-                    <a href="#volunteer" class="text-earth-800 hover:text-leaf-600 transition font-medium">Volunteer Program</a>
-                    <a href="#impact" class="text-earth-800 hover:text-leaf-600 transition font-medium">Impact</a>
-                    <a href="#products" class="bg-leaf-600 hover:bg-leaf-700 text-white px-5 py-2.5 rounded-full font-medium transition shadow-md hover:shadow-lg">Shop Now</a>
+                <div class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                    <a href="#process" class="text-earth-800 hover:text-leaf-600 transition font-medium text-sm lg:text-base">Our Process</a>
+                    <a href="#products" class="text-earth-800 hover:text-leaf-600 transition font-medium text-sm lg:text-base">Products</a>
+                    <a href="#volunteer" class="text-earth-800 hover:text-leaf-600 transition font-medium text-sm lg:text-base">Volunteer</a>
+                    <a href="#challenges" class="text-earth-800 hover:text-leaf-600 transition font-medium text-sm lg:text-base">Challenges</a>
+                    <a href="#impact" class="text-earth-800 hover:text-leaf-600 transition font-medium text-sm lg:text-base">Impact</a>
+                    <a href="#products" class="bg-leaf-600 hover:bg-leaf-700 text-white px-5 py-2.5 rounded-full font-medium transition shadow-md hover:shadow-lg text-sm lg:text-base">Shop Now</a>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
@@ -84,6 +88,7 @@
                 <a href="#process" class="block px-3 py-2 rounded-md text-base font-medium text-earth-800 hover:text-leaf-600 hover:bg-earth-200">Our Process</a>
                 <a href="#products" class="block px-3 py-2 rounded-md text-base font-medium text-earth-800 hover:text-leaf-600 hover:bg-earth-200">Products</a>
                 <a href="#volunteer" class="block px-3 py-2 rounded-md text-base font-medium text-earth-800 hover:text-leaf-600 hover:bg-earth-200">Volunteer</a>
+                <a href="#challenges" class="block px-3 py-2 rounded-md text-base font-medium text-earth-800 hover:text-leaf-600 hover:bg-earth-200">Challenges</a>
                 <a href="#impact" class="block px-3 py-2 rounded-md text-base font-medium text-earth-800 hover:text-leaf-600 hover:bg-earth-200">Impact</a>
             </div>
         </div>
@@ -103,18 +108,49 @@
                     <p class="text-lg text-earth-800 leading-relaxed max-w-lg">
                         We upcycle community leaf waste into durable, beautiful bags and eco-friendly paper products. Support sustainability and empower local students.
                     </p>
+                   
+                    <div class="flex flex-col gap-2 w-full max-w-md">
+                        <!-- Dropdown Inequality 1 -->
+                        <details class="group bg-white rounded-xl border border-leaf-200 shadow-sm overflow-hidden">
+                            <summary class="flex justify-between items-center cursor-pointer p-3 bg-leaf-50 hover:bg-leaf-100 transition">
+                                <span class="font-mono text-sm text-leaf-800 font-semibold">3L + 5000 &gt; 2L + 1,000,000</span>
+                                <svg class="w-4 h-4 text-leaf-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </summary>
+                            <div class="p-3 text-xs text-earth-800 bg-white border-t border-leaf-100">
+                                <strong>Explanation (L = Leaves Collected):</strong><br>
+                                Subtract 2L from both sides: L + 5000 &gt; 1,000,000<br>
+                                Subtract 5000 from both sides: <strong>L &gt; 995,000</strong><br>
+                                <em>We have collected over 995,000 leaves to date!</em>
+                            </div>
+                        </details>
+
+                        <!-- Dropdown Inequality 2 -->
+                        <details class="group bg-white rounded-xl border border-leaf-200 shadow-sm overflow-hidden">
+                            <summary class="flex justify-between items-center cursor-pointer p-3 bg-leaf-50 hover:bg-leaf-100 transition">
+                                <span class="font-mono text-sm text-leaf-800 font-semibold">2C + 150 &lt; 0.5C + 750</span>
+                                <svg class="w-4 h-4 text-leaf-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </summary>
+                            <div class="p-3 text-xs text-earth-800 bg-white border-t border-leaf-100">
+                                <strong>Explanation (C = Carbon Footprint in kg):</strong><br>
+                                Subtract 0.5C from both sides: 1.5C + 150 &lt; 750<br>
+                                Subtract 150 from both sides: 1.5C &lt; 600<br>
+                                Divide by 1.5: <strong>C &lt; 400</strong><br>
+                                <em>Our manufacturing carbon footprint stays strictly under 400kg.</em>
+                            </div>
+                        </details>
+                    </div>
+
                     <div class="flex flex-col sm:flex-row gap-4 pt-4">
                         <a href="#products" class="bg-leaf-600 hover:bg-leaf-700 text-white text-center px-8 py-4 rounded-full font-semibold text-lg transition shadow-lg hover:shadow-xl">
                             Shop Sustainable Goods
                         </a>
-                        <a href="#volunteer" class="bg-transparent border-2 border-leaf-600 text-leaf-700 hover:bg-leaf-50 text-center px-8 py-4 rounded-full font-semibold text-lg transition">
+                        <button onclick="openModal()" class="bg-transparent border-2 border-leaf-600 text-leaf-700 hover:bg-leaf-50 text-center px-8 py-4 rounded-full font-semibold text-lg transition">
                             Join Volunteer Program
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <div class="md:w-1/2 w-full">
-                    <!-- Placeholder 1: Hero Image -->
-                    <img src="https://placehold.co/800x600/438960/ffffff?text=Hero+Image:+Leaves+to+Bags" alt="Leaf to Bag Transformation" class="rounded-3xl shadow-2xl w-full h-auto object-cover border-4 border-white transform hover:scale-105 transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1000" alt="Sustainable Earth in Hands" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover border-4 border-white transform hover:scale-105 transition duration-500">
                 </div>
             </div>
         </div>
@@ -127,28 +163,64 @@
                 <h2 class="text-4xl font-serif font-bold text-earth-900 mb-4">How We Make It Happen</h2>
                 <p class="text-lg text-earth-800">From the neighborhood lawn to your hands, our process is 100% sustainable, chemical-free, and community-driven.</p>
             </div>
-            
+           
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <!-- Step 1 -->
-                <div class="bg-earth-100 rounded-3xl p-6 text-center shadow-sm hover:shadow-md transition">
-                    <!-- Placeholder 2 -->
-                    <img src="https://placehold.co/400x300/c2decb/214532?text=Collection" alt="Student collecting leaves" class="rounded-2xl w-full h-48 object-cover mb-6">
+                <div class="bg-earth-100 rounded-3xl p-6 text-center shadow-sm hover:shadow-md transition flex flex-col h-full">
+                    <img src="https://images.unsplash.com/photo-1508247192750-f8c5bb74a961?auto=format&fit=crop&q=80&w=800" alt="Autumn leaves collection" class="rounded-2xl w-full h-48 object-cover mb-6">
                     <h3 class="text-2xl font-bold text-leaf-800 mb-3">1. Collection</h3>
-                    <p class="text-earth-800">Local high school volunteers rake and collect fallen leaves from community yards, preventing them from producing methane in landfills.</p>
+                    <p class="text-earth-800 mb-3 flex-grow">Local high school volunteers rake and collect fallen leaves from community yards, preventing them from producing methane in landfills.</p>
+                    <details class="group bg-white rounded-xl border border-leaf-200 shadow-sm overflow-hidden text-left mt-auto">
+                        <summary class="flex justify-between items-center cursor-pointer p-3 bg-leaf-50 hover:bg-leaf-100 transition">
+                            <span class="font-mono text-xs text-leaf-800 font-semibold">5M - 100 &gt; 2M + 50</span>
+                            <svg class="w-4 h-4 text-leaf-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="p-3 text-xs text-earth-800 bg-white border-t border-leaf-100">
+                            <strong>Explanation (M = Methane Prevented):</strong><br>
+                            Subtract 2M: 3M - 100 &gt; 50<br>
+                            Add 100: 3M &gt; 150<br>
+                            Divide by 3: <strong>M &gt; 50</strong><br>
+                            <em>We prevent over 50kg of methane gas emissions per neighborhood sweep!</em>
+                        </div>
+                    </details>
                 </div>
                 <!-- Step 2 -->
-                <div class="bg-earth-100 rounded-3xl p-6 text-center shadow-sm hover:shadow-md transition">
-                    <!-- Placeholder 3 -->
-                    <img src="https://placehold.co/400x300/96c5a8/1c392a?text=Fiber+Extraction" alt="Fiber processing" class="rounded-2xl w-full h-48 object-cover mb-6">
+                <div class="bg-earth-100 rounded-3xl p-6 text-center shadow-sm hover:shadow-md transition flex flex-col h-full">
+                    <img src="https://images.unsplash.com/photo-1611288875782-990db028b340?auto=format&fit=crop&q=80&w=800" alt="Eco fiber processing" class="rounded-2xl w-full h-48 object-cover mb-6">
                     <h3 class="text-2xl font-bold text-leaf-800 mb-3">2. Fiber Extraction</h3>
-                    <p class="text-earth-800">Using our eco-friendly mechanical process, we break down the dry leaves into strong, flexible fibers and natural bio-composites.</p>
+                    <p class="text-earth-800 mb-3 flex-grow">Using our eco-friendly mechanical process, we break down the dry leaves into strong, flexible fibers and natural bio-composites.</p>
+                    <details class="group bg-white rounded-xl border border-leaf-200 shadow-sm overflow-hidden text-left mt-auto">
+                        <summary class="flex justify-between items-center cursor-pointer p-3 bg-leaf-50 hover:bg-leaf-100 transition">
+                            <span class="font-mono text-xs text-leaf-800 font-semibold">3C + 10 &le; C + 10</span>
+                            <svg class="w-4 h-4 text-leaf-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="p-3 text-xs text-earth-800 bg-white border-t border-leaf-100">
+                            <strong>Explanation (C = Chemicals Used):</strong><br>
+                            Subtract C: 2C + 10 &le; 10<br>
+                            Subtract 10: 2C &le; 0<br>
+                            Divide by 2: <strong>C &le; 0</strong><br>
+                            <em>We use absolutely zero harmful chemicals in our extraction process!</em>
+                        </div>
+                    </details>
                 </div>
                 <!-- Step 3 -->
-                <div class="bg-earth-100 rounded-3xl p-6 text-center shadow-sm hover:shadow-md transition">
-                    <!-- Placeholder 4 -->
-                    <img src="https://placehold.co/400x300/438960/ffffff?text=Manufacturing" alt="Bags manufacturing" class="rounded-2xl w-full h-48 object-cover mb-6">
+                <div class="bg-earth-100 rounded-3xl p-6 text-center shadow-sm hover:shadow-md transition flex flex-col h-full">
+                    <img src="https://images.unsplash.com/photo-1605600659908-0ef719419d41?auto=format&fit=crop&q=80&w=800" alt="Crafting handmade goods" class="rounded-2xl w-full h-48 object-cover mb-6">
                     <h3 class="text-2xl font-bold text-leaf-800 mb-3">3. Manufacturing</h3>
-                    <p class="text-earth-800">The fibers are pressed and woven into highly durable, aesthetic paper products and reusable shopping bags.</p>
+                    <p class="text-earth-800 mb-3 flex-grow">The fibers are pressed and woven into highly durable, aesthetic paper products and reusable shopping bags.</p>
+                    <details class="group bg-white rounded-xl border border-leaf-200 shadow-sm overflow-hidden text-left mt-auto">
+                        <summary class="flex justify-between items-center cursor-pointer p-3 bg-leaf-50 hover:bg-leaf-100 transition">
+                            <span class="font-mono text-xs text-leaf-800 font-semibold">4E - 20 &le; E + 100</span>
+                            <svg class="w-4 h-4 text-leaf-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="p-3 text-xs text-earth-800 bg-white border-t border-leaf-100">
+                            <strong>Explanation (E = Energy Used in kWh):</strong><br>
+                            Subtract E: 3E - 20 &le; 100<br>
+                            Add 20: 3E &le; 120<br>
+                            Divide by 3: <strong>E &le; 40</strong><br>
+                            <em>Our max energy expenditure per batch is capped at an ultra-low 40 kWh.</em>
+                        </div>
+                    </details>
                 </div>
             </div>
         </div>
@@ -169,60 +241,108 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Product 1 -->
-                <div class="bg-leaf-800 rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-xl group">
-                    <!-- Placeholder 5 -->
-                    <img src="https://placehold.co/400x400/27563c/ffffff?text=Everyday+Tote" alt="Everyday Tote" class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
-                    <div class="p-6">
+                <div class="bg-leaf-800 rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-xl group flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1597484662317-9bd7bdda2907?auto=format&fit=crop&q=80&w=800" alt="Everyday Tote" class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
+                    <div class="p-6 flex flex-col flex-grow">
                         <h4 class="text-xl font-bold text-white mb-2">The Everyday Tote</h4>
                         <p class="text-leaf-300 text-sm mb-4">Durable composite leaf fiber bag. Holds up to 25lbs.</p>
+                       
+                        <details class="group bg-leaf-900 rounded-xl border border-leaf-700 shadow-sm overflow-hidden mb-4 mt-auto">
+                            <summary class="flex justify-between items-center cursor-pointer p-2 bg-leaf-700 hover:bg-leaf-600 transition">
+                                <span class="font-mono text-[11px] text-white font-semibold">2D - 3 &ge; D + 2</span>
+                                <svg class="w-3 h-3 text-leaf-300 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </summary>
+                            <div class="p-2 text-[11px] text-leaf-200 bg-leaf-800 border-t border-leaf-700">
+                                <strong>D = Durability (Years)</strong><br>
+                                2D - D &ge; 2 + 3 &rarr; <strong>D &ge; 5</strong><br>
+                                Built to last 5+ years!
+                            </div>
+                        </details>
+
                         <div class="flex justify-between items-center">
                             <span class="text-xl font-semibold text-white">$24.00</span>
-                            <button class="bg-leaf-600 hover:bg-leaf-500 text-white p-2 rounded-full transition" title="Add to cart">
+                            <button onclick="showToast('Everyday Tote added to cart!')" class="bg-leaf-600 hover:bg-leaf-500 text-white p-2 rounded-full transition shadow-md hover:shadow-lg" title="Add to cart">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
                         </div>
                     </div>
                 </div>
                 <!-- Product 2 -->
-                <div class="bg-leaf-800 rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-xl group">
-                    <!-- Placeholder 6 -->
-                    <img src="https://placehold.co/400x400/27563c/ffffff?text=Premium+Notebook" alt="Premium Notebook" class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
-                    <div class="p-6">
+                <div class="bg-leaf-800 rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-xl group flex flex-col">
+                   <img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&q=80&w=800" alt="Leafcraft Notebook" class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
+                    <div class="p-6 flex flex-col flex-grow">
                         <h4 class="text-xl font-bold text-white mb-2">Leafcraft Notebook</h4>
                         <p class="text-leaf-300 text-sm mb-4">100 pages of smooth, unbleached leaf paper.</p>
+                       
+                        <details class="group bg-leaf-900 rounded-xl border border-leaf-700 shadow-sm overflow-hidden mb-4 mt-auto">
+                            <summary class="flex justify-between items-center cursor-pointer p-2 bg-leaf-700 hover:bg-leaf-600 transition">
+                                <span class="font-mono text-[11px] text-white font-semibold">5R - 100 &ge; 2R + 200</span>
+                                <svg class="w-3 h-3 text-leaf-300 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </summary>
+                            <div class="p-2 text-[11px] text-leaf-200 bg-leaf-800 border-t border-leaf-700">
+                                <strong>R = Recyclability %</strong><br>
+                                3R &ge; 300 &rarr; <strong>R &ge; 100</strong><br>
+                                100% recyclable after use.
+                            </div>
+                        </details>
+
                         <div class="flex justify-between items-center">
                             <span class="text-xl font-semibold text-white">$14.00</span>
-                            <button class="bg-leaf-600 hover:bg-leaf-500 text-white p-2 rounded-full transition" title="Add to cart">
+                            <button onclick="showToast('Notebook added to cart!')" class="bg-leaf-600 hover:bg-leaf-500 text-white p-2 rounded-full transition shadow-md hover:shadow-lg" title="Add to cart">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
                         </div>
                     </div>
                 </div>
                 <!-- Product 3 -->
-                <div class="bg-leaf-800 rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-xl group">
-                    <!-- Placeholder 7 -->
-                    <img src="https://placehold.co/400x400/27563c/ffffff?text=Produce+Bags" alt="Produce Bags" class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
-                    <div class="p-6">
+                <div class="bg-leaf-800 rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-xl group flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1610419366405-1e35aeb74005?auto=format&fit=crop&q=80&w=800" alt="Market Produce Bags" class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
+                    <div class="p-6 flex flex-col flex-grow">
                         <h4 class="text-xl font-bold text-white mb-2">Market Produce Bags</h4>
                         <p class="text-leaf-300 text-sm mb-4">Breathable mesh-style bags made from leaf strands. Set of 3.</p>
+                       
+                        <details class="group bg-leaf-900 rounded-xl border border-leaf-700 shadow-sm overflow-hidden mb-4 mt-auto">
+                            <summary class="flex justify-between items-center cursor-pointer p-2 bg-leaf-700 hover:bg-leaf-600 transition">
+                                <span class="font-mono text-[11px] text-white font-semibold">4M + 15 &le; 2M + 15</span>
+                                <svg class="w-3 h-3 text-leaf-300 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </summary>
+                            <div class="p-2 text-[11px] text-leaf-200 bg-leaf-800 border-t border-leaf-700">
+                                <strong>M = Microplastics</strong><br>
+                                2M &le; 0 &rarr; <strong>M &le; 0</strong><br>
+                                Zero microplastics shed in wash!
+                            </div>
+                        </details>
+
                         <div class="flex justify-between items-center">
                             <span class="text-xl font-semibold text-white">$18.00</span>
-                            <button class="bg-leaf-600 hover:bg-leaf-500 text-white p-2 rounded-full transition" title="Add to cart">
+                            <button onclick="showToast('Produce Bags added to cart!')" class="bg-leaf-600 hover:bg-leaf-500 text-white p-2 rounded-full transition shadow-md hover:shadow-lg" title="Add to cart">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
                         </div>
                     </div>
                 </div>
                 <!-- Product 4 -->
-                <div class="bg-leaf-800 rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-xl group">
-                    <!-- Placeholder 8 -->
-                    <img src="https://placehold.co/400x400/27563c/ffffff?text=Artisan+Wrapping" alt="Artisan Wrapping Paper" class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
-                    <div class="p-6">
+                <div class="bg-leaf-800 rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-xl group flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1513290255018-809ba8bcf2fb?auto=format&fit=crop&q=80&w=800" alt="Artisan Wrapping Paper" class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
+                    <div class="p-6 flex flex-col flex-grow">
                         <h4 class="text-xl font-bold text-white mb-2">Artisan Wrapping</h4>
                         <p class="text-leaf-300 text-sm mb-4">Textured, natural-tone wrapping paper for gifts.</p>
+                       
+                        <details class="group bg-leaf-900 rounded-xl border border-leaf-700 shadow-sm overflow-hidden mb-4 mt-auto">
+                            <summary class="flex justify-between items-center cursor-pointer p-2 bg-leaf-700 hover:bg-leaf-600 transition">
+                                <span class="font-mono text-[11px] text-white font-semibold">3I + 50 &le; I + 50</span>
+                                <svg class="w-3 h-3 text-leaf-300 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </summary>
+                            <div class="p-2 text-[11px] text-leaf-200 bg-leaf-800 border-t border-leaf-700">
+                                <strong>I = Tree Impact</strong><br>
+                                2I &le; 0 &rarr; <strong>I &le; 0</strong><br>
+                                Zero trees cut down.
+                            </div>
+                        </details>
+
                         <div class="flex justify-between items-center">
                             <span class="text-xl font-semibold text-white">$10.00</span>
-                            <button class="bg-leaf-600 hover:bg-leaf-500 text-white p-2 rounded-full transition" title="Add to cart">
+                            <button onclick="showToast('Wrapping Paper added to cart!')" class="bg-leaf-600 hover:bg-leaf-500 text-white p-2 rounded-full transition shadow-md hover:shadow-lg" title="Add to cart">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
                         </div>
@@ -237,43 +357,175 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center gap-12 bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-leaf-100">
                 <div class="lg:w-1/2 w-full grid grid-cols-2 gap-4">
-                    <!-- Placeholder 9 -->
-                    <img src="https://placehold.co/300x400/4a4737/ffffff?text=Students+Raking" alt="Students raking leaves" class="rounded-2xl w-full h-full object-cover shadow-md">
-                    <!-- Placeholder 10 -->
-                    <img src="https://placehold.co/300x400/64a67e/ffffff?text=Biology+Lesson" alt="Biology lesson in field" class="rounded-2xl w-full h-full object-cover shadow-md mt-8">
+                    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&q=80&w=800" alt="Students Volunteering" class="rounded-2xl w-full h-full object-cover shadow-md mt-8">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Group of students working" class="rounded-2xl w-full h-full object-cover shadow-md">
                 </div>
                 <div class="lg:w-1/2 space-y-6">
                     <h2 class="text-4xl font-serif font-bold text-leaf-900">Student Volunteer Program</h2>
                     <p class="text-lg text-earth-800">
                         Need community service hours? Want to make a real difference? Join the LeafCycle team! We offer a fun, outdoor experience that goes beyond just raking leaves.
                     </p>
-                    <ul class="space-y-4">
+                    <ul class="space-y-6 mt-4">
                         <li class="flex items-start gap-3">
                             <svg class="w-6 h-6 text-leaf-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <div>
+                            <div class="w-full">
                                 <h4 class="font-bold text-earth-900 text-lg">Easy Volunteer Hours</h4>
-                                <p class="text-earth-800 text-sm">Earn verified community service hours simply by collecting and bagging fallen leaves in designated neighborhoods.</p>
+                                <p class="text-earth-800 text-sm mb-2">Earn verified community service hours simply by collecting and bagging fallen leaves in designated neighborhoods.</p>
+                                <details class="group bg-leaf-50 rounded-lg border border-leaf-200 overflow-hidden text-sm">
+                                    <summary class="flex justify-between items-center cursor-pointer p-2 hover:bg-leaf-100 transition font-mono text-leaf-800">
+                                        <span>3V - 20 &ge; 2V + 20</span>
+                                        <svg class="w-4 h-4 text-leaf-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                    </summary>
+                                    <div class="p-2 border-t border-leaf-200 bg-white text-xs">
+                                        <strong>V = Volunteer Hours:</strong><br>
+                                        3V - 2V &ge; 20 + 20 &rarr; <strong>V &ge; 40</strong><br>
+                                        <em>Complete your full 40-hour requirement with us!</em>
+                                    </div>
+                                </details>
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
                             <svg class="w-6 h-6 text-leaf-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <div>
+                            <div class="w-full">
                                 <h4 class="font-bold text-earth-900 text-lg">Built-in Biology Lessons</h4>
-                                <p class="text-earth-800 text-sm">Learn about local flora, the carbon cycle, and decomposition from our environmental scientists during collection drives.</p>
+                                <p class="text-earth-800 text-sm mb-2">Learn about local flora, the carbon cycle, and decomposition from our environmental scientists during collection drives.</p>
+                                <details class="group bg-leaf-50 rounded-lg border border-leaf-200 overflow-hidden text-sm">
+                                    <summary class="flex justify-between items-center cursor-pointer p-2 hover:bg-leaf-100 transition font-mono text-leaf-800">
+                                        <span>2K - 50 &gt; K + 10</span>
+                                        <svg class="w-4 h-4 text-leaf-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                    </summary>
+                                    <div class="p-2 border-t border-leaf-200 bg-white text-xs">
+                                        <strong>K = Knowledge Score (%):</strong><br>
+                                        2K - K &gt; 10 + 50 &rarr; <strong>K &gt; 60</strong><br>
+                                        <em>Students see a massive &gt;60% increase in post-test ecology scores!</em>
+                                    </div>
+                                </details>
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
                             <svg class="w-6 h-6 text-leaf-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <div>
+                            <div class="w-full">
                                 <h4 class="font-bold text-earth-900 text-lg">$1,000 Scholarship Opportunity</h4>
-                                <p class="text-earth-800 text-sm">Every 10 hours volunteered enters you into our annual draw for a $1,000 college/university scholarship!</p>
+                                <p class="text-earth-800 text-sm mb-2">Every 10 hours volunteered enters you into our annual draw for a college/university scholarship!</p>
+                                <details class="group bg-leaf-50 rounded-lg border border-leaf-200 overflow-hidden text-sm">
+                                    <summary class="flex justify-between items-center cursor-pointer p-2 hover:bg-leaf-100 transition font-mono text-leaf-800">
+                                        <span>1.5S - 200 &ge; 0.5S + 800</span>
+                                        <svg class="w-4 h-4 text-leaf-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                    </summary>
+                                    <div class="p-2 border-t border-leaf-200 bg-white text-xs">
+                                        <strong>S = Scholarship ($):</strong><br>
+                                        1.5S - 0.5S &ge; 800 + 200 &rarr; <strong>S &ge; 1000</strong><br>
+                                        <em>Win a scholarship valued at $1,000 or more!</em>
+                                    </div>
+                                </details>
                             </div>
                         </li>
                     </ul>
-                    <button class="w-full sm:w-auto bg-earth-900 hover:bg-earth-800 text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-md">
+                    <button onclick="openModal()" class="w-full sm:w-auto bg-earth-900 hover:bg-earth-800 text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-md mt-4">
                         Sign Up to Volunteer Today
                     </button>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges We've Overcome Section (NEW) -->
+    <section id="challenges" class="py-20 bg-earth-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <div class="inline-block bg-earth-800 text-earth-100 px-4 py-1.5 rounded-full text-sm font-semibold uppercase tracking-wider mb-4">
+                    Challenges &ge; Success
+                </div>
+                <h2 class="text-4xl font-serif font-bold text-earth-900 mb-4">Obstacles We Have Overcome</h2>
+                <p class="text-lg text-earth-800">Building a revolutionary sustainable company isn't easy. Here is the math behind some of the major hurdles we cleared in our first year of operations.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Challenge 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-earth-300 flex flex-col">
+                    <h3 class="font-bold text-xl text-leaf-900 mb-2">Weather Delays</h3>
+                    <p class="text-earth-700 text-sm mb-4 flex-grow">Unpredictable rains heavily affected our collection schedule in the fall. We adapted by buying waterproof gear.</p>
+                    <details class="group bg-earth-50 rounded-xl border border-earth-200 shadow-sm overflow-hidden text-left mt-auto">
+                        <summary class="flex justify-between items-center cursor-pointer p-3 bg-earth-100 hover:bg-earth-200 transition">
+                            <span class="font-mono text-xs text-earth-900 font-semibold">4R + 10 &ge; 2R + 30</span>
+                            <svg class="w-4 h-4 text-earth-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="p-3 text-xs text-earth-800 bg-white border-t border-earth-200">
+                            <strong>R = Rainy Days:</strong><br>
+                            4R - 2R &ge; 30 - 10 &rarr; 2R &ge; 20 &rarr; <strong>R &ge; 10</strong><br>
+                            <em>We survived over 10 consecutive rain-out days by shifting to indoor fiber processing.</em>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Challenge 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-earth-300 flex flex-col">
+                    <h3 class="font-bold text-xl text-leaf-900 mb-2">Shipping Costs</h3>
+                    <p class="text-earth-700 text-sm mb-4 flex-grow">Initial logistics costs threatened our margins. We solved this by partnering with local, carbon-neutral couriers.</p>
+                    <details class="group bg-earth-50 rounded-xl border border-earth-200 shadow-sm overflow-hidden text-left mt-auto">
+                        <summary class="flex justify-between items-center cursor-pointer p-3 bg-earth-100 hover:bg-earth-200 transition">
+                            <span class="font-mono text-xs text-earth-900 font-semibold">5C - 500 &le; 3C + 1500</span>
+                            <svg class="w-4 h-4 text-earth-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="p-3 text-xs text-earth-800 bg-white border-t border-earth-200">
+                            <strong>C = Shipping Costs ($):</strong><br>
+                            2C &le; 2000 &rarr; <strong>C &le; 1000</strong><br>
+                            <em>We successfully negotiated to keep monthly local shipping costs strictly under $1,000.</em>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Challenge 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-earth-300 flex flex-col">
+                    <h3 class="font-bold text-xl text-leaf-900 mb-2">Prototype Failures</h3>
+                    <p class="text-earth-700 text-sm mb-4 flex-grow">Our early leaf paper was too brittle. Our engineers went back to the drawing board repeatedly.</p>
+                    <details class="group bg-earth-50 rounded-xl border border-earth-200 shadow-sm overflow-hidden text-left mt-auto">
+                        <summary class="flex justify-between items-center cursor-pointer p-3 bg-earth-100 hover:bg-earth-200 transition">
+                            <span class="font-mono text-xs text-earth-900 font-semibold">3P + 15 &lt; P + 35</span>
+                            <svg class="w-4 h-4 text-earth-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="p-3 text-xs text-earth-800 bg-white border-t border-earth-200">
+                            <strong>P = Prototype Failures:</strong><br>
+                            2P &lt; 20 &rarr; <strong>P &lt; 10</strong><br>
+                            <em>We achieved structural integrity in under 10 iterations!</em>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Challenge 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-earth-300 flex flex-col">
+                    <h3 class="font-bold text-xl text-leaf-900 mb-2">Funding the Dream</h3>
+                    <p class="text-earth-700 text-sm mb-4 flex-grow">Industrial mechanical presses are expensive. We had to pitch to investors to afford our core machinery.</p>
+                    <details class="group bg-earth-50 rounded-xl border border-earth-200 shadow-sm overflow-hidden text-left mt-auto">
+                        <summary class="flex justify-between items-center cursor-pointer p-3 bg-earth-100 hover:bg-earth-200 transition">
+                            <span class="font-mono text-[11px] text-earth-900 font-semibold">2F + 5000 &ge; 0.5F + 20000</span>
+                            <svg class="w-4 h-4 text-earth-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="p-3 text-xs text-earth-800 bg-white border-t border-earth-200">
+                            <strong>F = Funding Raised ($):</strong><br>
+                            1.5F &ge; 15000 &rarr; <strong>F &ge; 10000</strong><br>
+                            <em>Our community pitched in to help us secure the minimum $10,000 needed.</em>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Challenge 5 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-earth-300 flex flex-col md:col-span-2 lg:col-span-1">
+                    <h3 class="font-bold text-xl text-leaf-900 mb-2">Delivery Logistics</h3>
+                    <p class="text-earth-700 text-sm mb-4 flex-grow">Mapping out pickup routes for raw leaves took immense time. We optimized routes with custom software.</p>
+                    <details class="group bg-earth-50 rounded-xl border border-earth-200 shadow-sm overflow-hidden text-left mt-auto">
+                        <summary class="flex justify-between items-center cursor-pointer p-3 bg-earth-100 hover:bg-earth-200 transition">
+                            <span class="font-mono text-xs text-earth-900 font-semibold">6D - 30 &le; 2D + 50</span>
+                            <svg class="w-4 h-4 text-earth-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="p-3 text-xs text-earth-800 bg-white border-t border-earth-200">
+                            <strong>D = Delay (Hours):</strong><br>
+                            4D &le; 80 &rarr; <strong>D &le; 20</strong><br>
+                            <em>By utilizing our algorithm, total route delays are capped strictly under 20 hours a month.</em>
+                        </div>
+                    </details>
+                </div>
+
             </div>
         </div>
     </section>
@@ -288,77 +540,45 @@
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-serif font-bold text-leaf-300 mb-4">The Math Checks Out.</h2>
                 <p class="text-lg text-earth-200 max-w-2xl mx-auto">
-                    We believe in transparent, measurable impact. Here is how LeafCycle's environmental footprint compares to traditional manufacturing, expressed in simple inequalities.
+                    We believe in transparent, measurable impact. Here is how LeafCycle's environmental footprint compares to traditional manufacturing in the real world.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-                <!-- Left Image -->
-                <div class="hidden lg:block">
-                    <!-- Placeholder 11 -->
-                    <img src="https://placehold.co/400x600/3d3a2d/96c5a8?text=Traditional+Deforestation" alt="Traditional vs LeafCycle" class="rounded-3xl w-full h-full object-cover opacity-80 border border-earth-800">
-                </div>
-
-                <!-- Inequalities List (12 items) -->
-                <div class="lg:col-span-1 space-y-4">
-                    <div class="bg-earth-800/50 p-6 rounded-2xl border border-earth-700 backdrop-blur-sm">
-                        <ul class="space-y-4 text-sm md:text-base math-font font-medium text-leaf-100">
-                            <li class="flex items-center gap-2 border-b border-earth-700/50 pb-2">
-                                <span class="text-leaf-400">01.</span>
-                                <span>Trees_Cut(LeafCycle) = 0 &lt; Trees_Cut(Std_Paper)</span>
-                            </li>
-                            <li class="flex items-center gap-2 border-b border-earth-700/50 pb-2">
-                                <span class="text-leaf-400">02.</span>
-                                <span>Water_Usage(LeafCycle) &lt; Water_Usage(Trad_Bags)</span>
-                            </li>
-                            <li class="flex items-center gap-2 border-b border-earth-700/50 pb-2">
-                                <span class="text-leaf-400">03.</span>
-                                <span>CO2_Emissions(LeafCycle) &lt; Plastic_CO2 * 0.1</span>
-                            </li>
-                            <li class="flex items-center gap-2 border-b border-earth-700/50 pb-2">
-                                <span class="text-leaf-400">04.</span>
-                                <span>Decomp_Time(LeafCycle) &lt; Decomp_Time(Plastic)</span>
-                            </li>
-                            <li class="flex items-center gap-2 border-b border-earth-700/50 pb-2">
-                                <span class="text-leaf-400">05.</span>
-                                <span>Chemical_Bleach(LeafCycle) = 0 &lt; Trad_Pulping</span>
-                            </li>
-                            <li class="flex items-center gap-2 border-b border-earth-700/50 pb-2">
-                                <span class="text-leaf-400">06.</span>
-                                <span>Landfill_Leaf_Waste ↓ &gt; Previous_Years</span>
-                            </li>
-                            <li class="flex items-center gap-2 border-b border-earth-700/50 pb-2">
-                                <span class="text-leaf-400">07.</span>
-                                <span>Recyclability(LeafCycle) = 100% &gt; Plastic(1%)</span>
-                            </li>
-                            <li class="flex items-center gap-2 border-b border-earth-700/50 pb-2">
-                                <span class="text-leaf-400">08.</span>
-                                <span>Energy_Used_Per_Bag &lt; Paper_Bag_Energy / 2</span>
-                            </li>
-                            <li class="flex items-center gap-2 border-b border-earth-700/50 pb-2">
-                                <span class="text-leaf-400">09.</span>
-                                <span>Microplastics_Gen = 0 &lt; Synthetic_Totes</span>
-                            </li>
-                            <li class="flex items-center gap-2 border-b border-earth-700/50 pb-2">
-                                <span class="text-leaf-400">10.</span>
-                                <span>Biodiversity_Harm(LeafCycle) &lt; Standard_Logging</span>
-                            </li>
-                            <li class="flex items-center gap-2 border-b border-earth-700/50 pb-2">
-                                <span class="text-leaf-400">11.</span>
-                                <span>Student_Bio_Knowledge(Post) &gt; Knowledge(Pre)</span>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="text-leaf-400">12.</span>
-                                <span>Scholarships_Funded &ge; $1,000 / student</span>
-                            </li>
-                        </ul>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Image & Floating Inequality -->
+                <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800" alt="Clean Environment vs Landfill" class="rounded-3xl w-full h-96 object-cover opacity-90 border border-earth-700 shadow-2xl transition group-hover:opacity-100">
+                    <div class="absolute -bottom-6 -right-2 md:-right-6 bg-leaf-900 border-2 border-leaf-500 p-3 rounded-xl shadow-xl transform rotate-2 md:rotate-3 max-w-xs w-full">
+                        <details class="group w-full">
+                            <summary class="flex justify-between items-center cursor-pointer font-mono text-leaf-100 text-xs md:text-sm font-bold list-none">
+                                <span>4W - 500 &gt; 2W + 1500</span>
+                                <svg class="w-4 h-4 ml-2 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </summary>
+                            <div class="mt-2 text-xs text-leaf-200 font-sans border-t border-leaf-700 pt-2">
+                                <strong>W = Waste Diverted (lbs)</strong><br>
+                                2W &gt; 2000 &rarr; <strong>W &gt; 1000</strong><br>
+                                Over 1,000 lbs of landfill waste reduced weekly!
+                            </div>
+                        </details>
                     </div>
                 </div>
 
-                <!-- Right Image -->
-                <div class="hidden lg:block">
-                    <!-- Placeholder 12 -->
-                    <img src="https://placehold.co/400x600/3d3a2d/c2decb?text=Clean+Future" alt="Clean Environment Future" class="rounded-3xl w-full h-full object-cover opacity-80 border border-earth-800">
+                <!-- Right Image & Floating Inequality -->
+                <div class="relative group mt-10 lg:mt-0">
+                    <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&q=80&w=800" alt="Clean Environment Future Forest" class="rounded-3xl w-full h-96 object-cover opacity-90 border border-earth-700 shadow-2xl transition group-hover:opacity-100">
+                    <div class="absolute -top-6 -left-2 md:-left-6 bg-earth-800 border-2 border-earth-500 p-3 rounded-xl shadow-xl transform -rotate-2 md:-rotate-3 max-w-xs w-full">
+                        <details class="group w-full">
+                            <summary class="flex justify-between items-center cursor-pointer font-mono text-earth-100 text-xs md:text-sm font-bold list-none">
+                                <span>4B + 10 &lt; 2B + 10</span>
+                                <svg class="w-4 h-4 ml-2 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </summary>
+                            <div class="mt-2 text-xs text-earth-300 font-sans border-t border-earth-600 pt-2">
+                                <strong>B = Biodiversity Harm</strong><br>
+                                2B &lt; 0 &rarr; <strong>B &lt; 0</strong><br>
+                                We deal ZERO harm to local ecosystems.
+                            </div>
+                        </details>
+                    </div>
                 </div>
             </div>
         </div>
@@ -379,7 +599,7 @@
                         Revolutionizing the way we think about waste. Beautiful products made entirely from community-collected leaves.
                     </p>
                 </div>
-                
+               
                 <div>
                     <h4 class="font-bold text-earth-900 mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-sm text-earth-800">
@@ -402,15 +622,28 @@
                 <div>
                     <h4 class="font-bold text-earth-900 mb-4">Stay in the Loop</h4>
                     <p class="text-sm text-earth-800 mb-4">Sign up for our newsletter to hear about new products and volunteer drives.</p>
-                    <form onsubmit="event.preventDefault(); alert('Thanks for subscribing!');" class="flex flex-col gap-2">
+                    <form onsubmit="event.preventDefault(); showToast('Thanks for subscribing!');" class="flex flex-col gap-2">
                         <input type="email" placeholder="Your email address" class="px-4 py-2 rounded-lg border border-earth-300 focus:outline-none focus:ring-2 focus:ring-leaf-500 bg-white" required>
                         <button type="submit" class="bg-leaf-600 hover:bg-leaf-700 text-white px-4 py-2 rounded-lg font-medium transition">Subscribe</button>
                     </form>
                 </div>
             </div>
-            
+           
             <div class="border-t border-earth-300 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-earth-800">
                 <p>&copy; 2026 LeafCycle Inc. All rights reserved.</p>
+               
+                <details class="group relative z-10 w-full max-w-[300px]">
+                    <summary class="flex justify-between items-center cursor-pointer font-mono text-leaf-700 bg-white px-3 py-1.5 rounded-lg shadow-sm border border-earth-200 list-none">
+                        <span class="text-xs font-bold">5I - 10 &gt; 3I + 50</span>
+                        <svg class="w-3 h-3 ml-2 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="absolute bottom-full left-0 mb-2 w-full p-2 bg-white rounded shadow-lg border border-earth-200 text-xs">
+                        <strong>I = Total Impact Score</strong><br>
+                        2I &gt; 60 &rarr; <strong>I &gt; 30</strong><br>
+                        Our composite index is soaring!
+                    </div>
+                </details>
+
                 <div class="flex gap-4">
                     <a href="#" class="hover:text-leaf-600 transition">Privacy Policy</a>
                     <a href="#" class="hover:text-leaf-600 transition">Terms of Service</a>
@@ -419,7 +652,43 @@
         </div>
     </footer>
 
-    <!-- Basic JavaScript for mobile menu -->
+    <!-- Modals & Toasts (Replaces standard alerts) -->
+   
+    <!-- Volunteer Sign Up Modal -->
+    <div id="signup-modal" class="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center hidden backdrop-blur-sm opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl transform scale-95 transition-transform duration-300" id="signup-modal-content">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-serif font-bold text-earth-900">Join LeafCycle</h3>
+                <button onclick="closeModal()" class="text-earth-500 hover:text-earth-900 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <p class="text-earth-800 mb-6 text-sm">Fill out the form below to start earning volunteer hours and enter the $1,000 scholarship pool.</p>
+            <form onsubmit="event.preventDefault(); closeModal(); showToast('Application submitted successfully!');" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-earth-900 mb-1">Full Name</label>
+                    <input type="text" class="w-full px-4 py-2 rounded-lg border border-earth-300 focus:ring-2 focus:ring-leaf-500 focus:outline-none" required>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-earth-900 mb-1">High School</label>
+                    <input type="text" class="w-full px-4 py-2 rounded-lg border border-earth-300 focus:ring-2 focus:ring-leaf-500 focus:outline-none" required>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-earth-900 mb-1">Email</label>
+                    <input type="email" class="w-full px-4 py-2 rounded-lg border border-earth-300 focus:ring-2 focus:ring-leaf-500 focus:outline-none" required>
+                </div>
+                <button type="submit" class="w-full bg-leaf-600 hover:bg-leaf-700 text-white font-bold py-3 rounded-xl transition shadow-md mt-2">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Custom Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-leaf-800 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3 z-[110] transform translate-y-20 opacity-0 transition-all duration-300 font-medium">
+        <svg class="w-6 h-6 text-leaf-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <span id="toast-message">Action successful!</span>
+    </div>
+
+    <!-- Basic JavaScript for mobile menu, modal, and toast -->
     <script>
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
             var menu = document.getElementById('mobile-menu');
@@ -429,7 +698,7 @@
                 menu.classList.add('hidden');
             }
         });
-        
+       
         // Hide mobile menu on link click
         var mobileLinks = document.querySelectorAll('#mobile-menu a');
         mobileLinks.forEach(function(link) {
@@ -437,6 +706,53 @@
                 document.getElementById('mobile-menu').classList.add('hidden');
             });
         });
+
+        // Modal Logic
+        const modal = document.getElementById('signup-modal');
+        const modalContent = document.getElementById('signup-modal-content');
+       
+        function openModal() {
+            modal.classList.remove('hidden');
+            // Small delay to allow display:block to apply before animating opacity
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300); // Wait for transition to finish
+        }
+
+        // Close modal when clicking outside of it
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Toast Notification Logic
+        let toastTimeout;
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+           
+            toastMsg.textContent = message;
+           
+            toast.classList.remove('translate-y-20', 'opacity-0');
+           
+            if(toastTimeout) clearTimeout(toastTimeout);
+           
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
     </script>
 </body>
 </html>
