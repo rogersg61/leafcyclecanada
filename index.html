@@ -108,34 +108,58 @@
                     <p class="text-lg text-earth-800 leading-relaxed max-w-lg">
                         We upcycle community leaf waste into durable, beautiful bags and eco-friendly paper products. Support sustainability and empower local students.
                     </p>
+                    <p class="text-xs text-earth-600 max-w-md">
+                        The numbers in these worked examples are illustrative model values, not audited LeafCycle measurements. In each equation, constants are assumed starting amounts that do not change with the variable; each dropdown explains what its numbers and operations mean.
+                    </p>
                    
                     <div class="flex flex-col gap-2 w-full max-w-md">
                         <!-- Dropdown Inequality 1 -->
                         <details class="group bg-white rounded-xl border border-leaf-200 shadow-sm overflow-hidden">
                             <summary class="flex justify-between items-center cursor-pointer p-3 bg-leaf-50 hover:bg-leaf-100 transition">
-                                <span class="font-mono text-sm text-leaf-800 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Leaves collected</span>3L + 5000 &gt; 2L + 1,000,000</span>
+                                <span class="font-mono text-sm text-leaf-800 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Leaves collected</span>4.5L + 12,500 &gt; 2.5L + 2,012,500</span>
                                 <svg class="w-4 h-4 text-leaf-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </summary>
                             <div class="p-3 text-xs text-earth-800 bg-white border-t border-leaf-100">
-                                <strong>Explanation (L = Leaves Collected):</strong><br>
-                                Subtract 2L from both sides: L + 5000 &gt; 1,000,000<br>
-                                Subtract 5000 from both sides: <strong>L &gt; 995,000</strong><br>
-                                <em>We have collected over 995,000 leaves to date!</em>
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li><strong>Scenario:</strong> Compare two running estimates of leaves collected.</li>
+                                    <li><strong>Variable:</strong> L is the number of leaves collected.</li>
+                                    <li><strong>Variable terms:</strong> 4.5L means 4.5 times L; 2.5L means 2.5 times L.</li>
+                                    <li><strong>Constants:</strong> +12,500 adds the assumed leaves already in the first tally; +2,012,500 adds the comparison tally's assumed starting count. These amounts do not change with L.</li>
+                                    <li><strong>Sign:</strong> &gt; means the first estimate must be strictly greater than the second.</li>
+                                    <li><strong>Solving:</strong>
+                                        <ul class="list-[circle] pl-4 space-y-0.5">
+                                            <li>Subtract 2.5L from both sides: 2L + 12,500 &gt; 2,012,500.</li>
+                                            <li>Subtract 12,500 from both sides: 2L &gt; 2,000,000.</li>
+                                            <li>Divide both sides by 2: <strong>L &gt; 1,000,000.</strong></li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Result:</strong> The estimate requires more than one million leaves.</li>
+                                </ul>
                             </div>
                         </details>
 
                         <!-- Dropdown Inequality 2 -->
                         <details class="group bg-white rounded-xl border border-leaf-200 shadow-sm overflow-hidden">
                             <summary class="flex justify-between items-center cursor-pointer p-3 bg-leaf-50 hover:bg-leaf-100 transition">
-                                <span class="font-mono text-sm text-leaf-800 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Carbon footprint</span>2C + 150 &lt; 0.5C + 750</span>
+                                <span class="font-mono text-sm text-leaf-800 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Carbon footprint</span>3.5C + 125 &lt; 1.5C + 825</span>
                                 <svg class="w-4 h-4 text-leaf-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </summary>
                             <div class="p-3 text-xs text-earth-800 bg-white border-t border-leaf-100">
-                                <strong>Explanation (C = Carbon Footprint in kg):</strong><br>
-                                Subtract 0.5C from both sides: 1.5C + 150 &lt; 750<br>
-                                Subtract 150 from both sides: 1.5C &lt; 600<br>
-                                Divide by 1.5: <strong>C &lt; 400</strong><br>
-                                <em>Our manufacturing carbon footprint stays strictly under 400kg.</em>
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li><strong>Scenario:</strong> Compare two accounting estimates of the manufacturing footprint.</li>
+                                    <li><strong>Variable:</strong> C is the carbon footprint in kilograms.</li>
+                                    <li><strong>Variable terms:</strong> 3.5C means 3.5 times C; 1.5C means 1.5 times C.</li>
+                                    <li><strong>Constants:</strong> +125 kg adds the first process's assumed setup emissions; +825 kg adds the comparison process's assumed starting emissions. Neither amount changes with C.</li>
+                                    <li><strong>Sign:</strong> &lt; means the first estimate must be strictly less than the second.</li>
+                                    <li><strong>Solving:</strong>
+                                        <ul class="list-[circle] pl-4 space-y-0.5">
+                                            <li>Subtract 1.5C from both sides: 2C + 125 &lt; 825.</li>
+                                            <li>Subtract 125 from both sides: 2C &lt; 700.</li>
+                                            <li>Divide both sides by 2: <strong>C &lt; 350.</strong></li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Result:</strong> The modeled footprint is below 350 kg.</li>
+                                </ul>
                             </div>
                         </details>
                     </div>
@@ -172,15 +196,25 @@
                     <p class="text-earth-800 mb-3 flex-grow">Local high school volunteers rake and collect fallen leaves from community yards, preventing them from producing methane in landfills.</p>
                     <details class="group bg-white rounded-xl border border-leaf-200 shadow-sm overflow-hidden text-left mt-auto">
                         <summary class="flex justify-between items-center cursor-pointer p-3 bg-leaf-50 hover:bg-leaf-100 transition">
-                            <span class="font-mono text-xs text-leaf-800 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Methane prevented</span>5M - 100 &gt; 2M + 50</span>
+                            <span class="font-mono text-xs text-leaf-800 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Methane prevented</span>4.5M + 12 &gt; 1.5M + 162</span>
                             <svg class="w-4 h-4 text-leaf-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="p-3 text-xs text-earth-800 bg-white border-t border-leaf-100">
-                            <strong>Explanation (M = Methane Prevented):</strong><br>
-                            Subtract 2M: 3M - 100 &gt; 50<br>
-                            Add 100: 3M &gt; 150<br>
-                            Divide by 3: <strong>M &gt; 50</strong><br>
-                            <em>We prevent over 50kg of methane gas emissions per neighborhood sweep!</em>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li><strong>Scenario:</strong> Compare two estimates of methane prevented during a neighborhood sweep.</li>
+                                <li><strong>Variable:</strong> M is kilograms of methane prevented.</li>
+                                <li><strong>Variable terms:</strong> 4.5M means 4.5 times M; 1.5M means 1.5 times M.</li>
+                                <li><strong>Constants:</strong> +12 kg is the first estimate's assumed starting credit; +162 kg is the comparison estimate's assumed starting credit. Neither changes with M.</li>
+                                <li><strong>Sign:</strong> &gt; means the first estimate must be strictly greater than the second.</li>
+                                <li><strong>Solving:</strong>
+                                    <ul class="list-[circle] pl-4 space-y-0.5">
+                                        <li>Subtract 1.5M from both sides: 3M + 12 &gt; 162.</li>
+                                        <li>Subtract 12 from both sides: 3M &gt; 150.</li>
+                                        <li>Divide both sides by 3: <strong>M &gt; 50.</strong></li>
+                                    </ul>
+                                </li>
+                                <li><strong>Result:</strong> The model requires more than 50 kg of methane prevented per sweep.</li>
+                            </ul>
                         </div>
                     </details>
                 </div>
@@ -191,15 +225,25 @@
                     <p class="text-earth-800 mb-3 flex-grow">Using our eco-friendly mechanical process, we break down the dry leaves into strong, flexible fibers and natural bio-composites.</p>
                     <details class="group bg-white rounded-xl border border-leaf-200 shadow-sm overflow-hidden text-left mt-auto">
                         <summary class="flex justify-between items-center cursor-pointer p-3 bg-leaf-50 hover:bg-leaf-100 transition">
-                            <span class="font-mono text-xs text-leaf-800 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Chemicals used</span>3C + 10 &le; C + 10</span>
+                            <span class="font-mono text-xs text-leaf-800 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Harmful chemicals avoided</span>4A + 10 &ge; 2A + 130</span>
                             <svg class="w-4 h-4 text-leaf-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="p-3 text-xs text-earth-800 bg-white border-t border-leaf-100">
-                            <strong>Explanation (C = Chemicals Used):</strong><br>
-                            Subtract C: 2C + 10 &le; 10<br>
-                            Subtract 10: 2C &le; 0<br>
-                            Divide by 2: <strong>C &le; 0</strong><br>
-                            <em>We use absolutely zero harmful chemicals in our extraction process!</em>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li><strong>Scenario:</strong> Compare harmful additives avoided with a conventional-process benchmark.</li>
+                                <li><strong>Variable:</strong> A is grams of harmful additives avoided per batch.</li>
+                                <li><strong>Variable terms:</strong> 4A means 4 times A; 2A means 2 times A.</li>
+                                <li><strong>Constants:</strong> +10 g is the first model's assumed starting credit; +130 g is the comparison benchmark's starting amount. Neither changes with A.</li>
+                                <li><strong>Sign:</strong> &ge; means the first total must be greater than or equal to the benchmark.</li>
+                                <li><strong>Solving:</strong>
+                                    <ul class="list-[circle] pl-4 space-y-0.5">
+                                        <li>Subtract 2A from both sides: 2A + 10 &ge; 130.</li>
+                                        <li>Subtract 10 from both sides: 2A &ge; 120.</li>
+                                        <li>Divide both sides by 2: <strong>A &ge; 60.</strong></li>
+                                    </ul>
+                                </li>
+                                <li><strong>Result:</strong> The model requires avoiding at least 60 g per batch.</li>
+                            </ul>
                         </div>
                     </details>
                 </div>
@@ -210,15 +254,25 @@
                     <p class="text-earth-800 mb-3 flex-grow">The fibers are pressed and woven into highly durable, aesthetic paper products and reusable shopping bags.</p>
                     <details class="group bg-white rounded-xl border border-leaf-200 shadow-sm overflow-hidden text-left mt-auto">
                         <summary class="flex justify-between items-center cursor-pointer p-3 bg-leaf-50 hover:bg-leaf-100 transition">
-                            <span class="font-mono text-xs text-leaf-800 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Energy used</span>4E - 20 &le; E + 100</span>
+                            <span class="font-mono text-xs text-leaf-800 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Energy used</span>5E - 30 &le; 2E + 90</span>
                             <svg class="w-4 h-4 text-leaf-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="p-3 text-xs text-earth-800 bg-white border-t border-leaf-100">
-                            <strong>Explanation (E = Energy Used in kWh):</strong><br>
-                            Subtract E: 3E - 20 &le; 100<br>
-                            Add 20: 3E &le; 120<br>
-                            Divide by 3: <strong>E &le; 40</strong><br>
-                            <em>Our max energy expenditure per batch is capped at an ultra-low 40 kWh.</em>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li><strong>Scenario:</strong> Compare two adjusted energy estimates for one manufacturing batch.</li>
+                                <li><strong>Variable:</strong> E is energy used, measured in kilowatt-hours (kWh).</li>
+                                <li><strong>Variable terms:</strong> 5E means 5 times E; 2E means 2 times E.</li>
+                                <li><strong>Constants:</strong> -30 subtracts an assumed 30 kWh adjustment from the first estimate; +90 adds a 90 kWh allowance to the second. Neither changes with E.</li>
+                                <li><strong>Sign:</strong> &le; means the first estimate is less than or equal to the second.</li>
+                                <li><strong>Solving:</strong>
+                                    <ul class="list-[circle] pl-4 space-y-0.5">
+                                        <li>Subtract 2E from both sides: 3E - 30 &le; 90.</li>
+                                        <li>Add 30 to both sides: 3E &le; 120.</li>
+                                        <li>Divide both sides by 3: <strong>E &le; 40.</strong></li>
+                                    </ul>
+                                </li>
+                                <li><strong>Result:</strong> The modeled use is at most 40 kWh per batch.</li>
+                            </ul>
                         </div>
                     </details>
                 </div>
@@ -249,13 +303,25 @@
                        
                         <details class="group bg-leaf-900 rounded-xl border border-leaf-700 shadow-sm overflow-hidden mb-4 mt-auto">
                             <summary class="flex justify-between items-center cursor-pointer p-2 bg-leaf-700 hover:bg-leaf-600 transition">
-                                <span class="font-mono text-[11px] text-white font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Tote durability</span>2D - 3 &ge; D + 2</span>
+                                <span class="font-mono text-[11px] text-white font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Tote durability</span>3.5D - 4 &ge; 1.5D + 6</span>
                                 <svg class="w-3 h-3 text-leaf-300 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </summary>
                             <div class="p-2 text-[11px] text-leaf-200 bg-leaf-800 border-t border-leaf-700">
-                                <strong>D = Durability (Years)</strong><br>
-                                2D - D &ge; 2 + 3 &rarr; <strong>D &ge; 5</strong><br>
-                                Built to last 5+ years!
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li><strong>Scenario:</strong> Compare a tote's durability estimate with its minimum target.</li>
+                                    <li><strong>Variable:</strong> D is durability in years.</li>
+                                    <li><strong>Variable terms:</strong> 3.5D means 3.5 times D; 1.5D means 1.5 times D.</li>
+                                    <li><strong>Constants:</strong> -4 subtracts 4 years from the first estimate; +6 adds 6 years to the target estimate. Neither changes with D.</li>
+                                    <li><strong>Sign:</strong> &ge; means the first estimate must be greater than or equal to the target.</li>
+                                    <li><strong>Solving:</strong>
+                                        <ul class="list-[circle] pl-4 space-y-0.5">
+                                            <li>Subtract 1.5D from both sides: 2D - 4 &ge; 6.</li>
+                                            <li>Add 4 to both sides: 2D &ge; 10.</li>
+                                            <li>Divide both sides by 2: <strong>D &ge; 5.</strong></li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Result:</strong> The model requires a tote durability of at least 5 years.</li>
+                                </ul>
                             </div>
                         </details>
 
@@ -276,13 +342,25 @@
                        
                         <details class="group bg-leaf-900 rounded-xl border border-leaf-700 shadow-sm overflow-hidden mb-4 mt-auto">
                             <summary class="flex justify-between items-center cursor-pointer p-2 bg-leaf-700 hover:bg-leaf-600 transition">
-                                <span class="font-mono text-[11px] text-white font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Notebook recyclability</span>5R - 100 &ge; 2R + 200</span>
+                                <span class="font-mono text-[11px] text-white font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Notebook recyclability</span>4.5R - 70 &ge; 2R + 130</span>
                                 <svg class="w-3 h-3 text-leaf-300 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </summary>
                             <div class="p-2 text-[11px] text-leaf-200 bg-leaf-800 border-t border-leaf-700">
-                                <strong>R = Recyclability %</strong><br>
-                                3R &ge; 300 &rarr; <strong>R &ge; 100</strong><br>
-                                100% recyclable after use.
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li><strong>Scenario:</strong> Compare two estimates of recyclable notebook material.</li>
+                                    <li><strong>Variable:</strong> R is the recyclability percentage.</li>
+                                    <li><strong>Variable terms:</strong> 4.5R means 4.5 times R; 2R means 2 times R.</li>
+                                    <li><strong>Constants:</strong> -70 subtracts 70 percentage points from the first estimate; +130 adds 130 points to the comparison estimate. Neither changes with R.</li>
+                                    <li><strong>Sign:</strong> &ge; means the first estimate is greater than or equal to the second.</li>
+                                    <li><strong>Solving:</strong>
+                                        <ul class="list-[circle] pl-4 space-y-0.5">
+                                            <li>Subtract 2R from both sides: 2.5R - 70 &ge; 130.</li>
+                                            <li>Add 70 to both sides: 2.5R &ge; 200.</li>
+                                            <li>Divide both sides by 2.5: <strong>R &ge; 80.</strong></li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Result:</strong> The model requires at least 80% recyclability.</li>
+                                </ul>
                             </div>
                         </details>
 
@@ -303,13 +381,25 @@
                        
                         <details class="group bg-leaf-900 rounded-xl border border-leaf-700 shadow-sm overflow-hidden mb-4 mt-auto">
                             <summary class="flex justify-between items-center cursor-pointer p-2 bg-leaf-700 hover:bg-leaf-600 transition">
-                                <span class="font-mono text-[11px] text-white font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Microplastics shed</span>4M + 15 &le; 2M + 15</span>
+                                <span class="font-mono text-[11px] text-white font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Microplastics shed</span>5M + 15 &le; 3M + 15</span>
                                 <svg class="w-3 h-3 text-leaf-300 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </summary>
                             <div class="p-2 text-[11px] text-leaf-200 bg-leaf-800 border-t border-leaf-700">
-                                <strong>M = Microplastics</strong><br>
-                                2M &le; 0 &rarr; <strong>M &le; 0</strong><br>
-                                Zero microplastics shed in wash!
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li><strong>Scenario:</strong> Compare two estimates of microplastic particles shed in one wash.</li>
+                                    <li><strong>Variable:</strong> M is the number of particles shed per wash; it cannot be negative.</li>
+                                    <li><strong>Variable terms:</strong> 5M means 5 times M; 3M means 3 times M.</li>
+                                    <li><strong>Constants:</strong> Each +15 adds the same assumed 15-particle test-background count to its side. These counts do not change with M.</li>
+                                    <li><strong>Sign:</strong> &le; means the first estimate is less than or equal to the second.</li>
+                                    <li><strong>Solving:</strong>
+                                        <ul class="list-[circle] pl-4 space-y-0.5">
+                                            <li>Subtract 3M from both sides: 2M + 15 &le; 15.</li>
+                                            <li>Subtract 15 from both sides: 2M &le; 0.</li>
+                                            <li>Divide by 2: M &le; 0. Since M cannot be negative, <strong>M = 0.</strong></li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Result:</strong> The model allows zero particles shed per wash.</li>
+                                </ul>
                             </div>
                         </details>
 
@@ -330,13 +420,25 @@
                        
                         <details class="group bg-leaf-900 rounded-xl border border-leaf-700 shadow-sm overflow-hidden mb-4 mt-auto">
                             <summary class="flex justify-between items-center cursor-pointer p-2 bg-leaf-700 hover:bg-leaf-600 transition">
-                                <span class="font-mono text-[11px] text-white font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Tree impact</span>3I + 50 &le; I + 50</span>
+                                <span class="font-mono text-[11px] text-white font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Trees spared</span>5T + 20 &ge; 3T + 100</span>
                                 <svg class="w-3 h-3 text-leaf-300 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </summary>
                             <div class="p-2 text-[11px] text-leaf-200 bg-leaf-800 border-t border-leaf-700">
-                                <strong>I = Tree Impact</strong><br>
-                                2I &le; 0 &rarr; <strong>I &le; 0</strong><br>
-                                Zero trees cut down.
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li><strong>Scenario:</strong> Compare two estimates of trees spared by leaf-based wrapping.</li>
+                                    <li><strong>Variable:</strong> T is the number of trees spared.</li>
+                                    <li><strong>Variable terms:</strong> 5T means 5 times T; 3T means 3 times T.</li>
+                                    <li><strong>Constants:</strong> +20 adds an assumed 20-tree starting credit to the first estimate; +100 adds the comparison target's assumed 100 trees. Neither changes with T.</li>
+                                    <li><strong>Sign:</strong> &ge; means the first estimate is greater than or equal to the second.</li>
+                                    <li><strong>Solving:</strong>
+                                        <ul class="list-[circle] pl-4 space-y-0.5">
+                                            <li>Subtract 3T from both sides: 2T + 20 &ge; 100.</li>
+                                            <li>Subtract 20 from both sides: 2T &ge; 80.</li>
+                                            <li>Divide both sides by 2: <strong>T &ge; 40.</strong></li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Result:</strong> The model requires at least 40 trees spared.</li>
+                                </ul>
                             </div>
                         </details>
 
@@ -373,13 +475,25 @@
                                 <p class="text-earth-800 text-sm mb-2">Earn verified community service hours simply by collecting and bagging fallen leaves in designated neighborhoods.</p>
                                 <details class="group bg-leaf-50 rounded-lg border border-leaf-200 overflow-hidden text-sm">
                                     <summary class="flex justify-between items-center cursor-pointer p-2 hover:bg-leaf-100 transition font-mono text-leaf-800">
-                                        <span><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Volunteer hours</span>3V - 20 &ge; 2V + 20</span>
+                                        <span><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Volunteer hours</span>4V - 30 &ge; 2V + 50</span>
                                         <svg class="w-4 h-4 text-leaf-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                     </summary>
                                     <div class="p-2 border-t border-leaf-200 bg-white text-xs">
-                                        <strong>V = Volunteer Hours:</strong><br>
-                                        3V - 2V &ge; 20 + 20 &rarr; <strong>V &ge; 40</strong><br>
-                                        <em>Complete your full 40-hour requirement with us!</em>
+                                        <ul class="list-disc pl-4 space-y-1">
+                                            <li><strong>Scenario:</strong> Compare volunteer-hour credits with the 40-hour service requirement.</li>
+                                            <li><strong>Variable:</strong> V is the number of volunteer hours completed.</li>
+                                            <li><strong>Variable terms:</strong> 4V means 4 times V; 2V means 2 times V.</li>
+                                            <li><strong>Constants:</strong> -30 subtracts 30 hours from the first estimate; +50 adds the comparison requirement. Neither changes with V.</li>
+                                            <li><strong>Sign:</strong> &ge; means the first total must be greater than or equal to the requirement.</li>
+                                            <li><strong>Solving:</strong>
+                                                <ul class="list-[circle] pl-4 space-y-0.5">
+                                                    <li>Subtract 2V from both sides: 2V - 30 &ge; 50.</li>
+                                                    <li>Add 30 to both sides: 2V &ge; 80.</li>
+                                                    <li>Divide both sides by 2: <strong>V &ge; 40.</strong></li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Result:</strong> The model requires at least 40 volunteer hours.</li>
+                                        </ul>
                                     </div>
                                 </details>
                             </div>
@@ -391,13 +505,25 @@
                                 <p class="text-earth-800 text-sm mb-2">Learn about local flora, the carbon cycle, and decomposition from our environmental scientists during collection drives.</p>
                                 <details class="group bg-leaf-50 rounded-lg border border-leaf-200 overflow-hidden text-sm">
                                     <summary class="flex justify-between items-center cursor-pointer p-2 hover:bg-leaf-100 transition font-mono text-leaf-800">
-                                        <span><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Ecology knowledge score</span>2K - 50 &gt; K + 10</span>
+                                        <span><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Ecology knowledge score</span>3K - 45 &gt; 1.5K + 45</span>
                                         <svg class="w-4 h-4 text-leaf-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                     </summary>
                                     <div class="p-2 border-t border-leaf-200 bg-white text-xs">
-                                        <strong>K = Knowledge Score (%):</strong><br>
-                                        2K - K &gt; 10 + 50 &rarr; <strong>K &gt; 60</strong><br>
-                                        <em>Students see a massive &gt;60% increase in post-test ecology scores!</em>
+                                        <ul class="list-disc pl-4 space-y-1">
+                                            <li><strong>Scenario:</strong> Compare an ecology post-test score with its target.</li>
+                                            <li><strong>Variable:</strong> K is the knowledge score in percentage points.</li>
+                                            <li><strong>Variable terms:</strong> 3K means 3 times K; 1.5K means 1.5 times K.</li>
+                                            <li><strong>Constants:</strong> -45 subtracts 45 points from the first estimate; +45 adds a 45-point benchmark to the second. Neither changes with K.</li>
+                                            <li><strong>Sign:</strong> &gt; means the first estimate must be strictly greater than the second.</li>
+                                            <li><strong>Solving:</strong>
+                                                <ul class="list-[circle] pl-4 space-y-0.5">
+                                                    <li>Subtract 1.5K from both sides: 1.5K - 45 &gt; 45.</li>
+                                                    <li>Add 45 to both sides: 1.5K &gt; 90.</li>
+                                                    <li>Divide both sides by 1.5: <strong>K &gt; 60.</strong></li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Result:</strong> The model requires a post-test score above 60%.</li>
+                                        </ul>
                                     </div>
                                 </details>
                             </div>
@@ -409,13 +535,24 @@
                                 <p class="text-earth-800 text-sm mb-2">Every 10 hours volunteered enters you into our annual draw for a college/university scholarship!</p>
                                 <details class="group bg-leaf-50 rounded-lg border border-leaf-200 overflow-hidden text-sm">
                                     <summary class="flex justify-between items-center cursor-pointer p-2 hover:bg-leaf-100 transition font-mono text-leaf-800">
-                                        <span><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Scholarship value</span>1.5S - 200 &ge; 0.5S + 800</span>
+                                        <span><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Scholarship value</span>2.5S - 250 &ge; 1.5S + 750</span>
                                         <svg class="w-4 h-4 text-leaf-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                     </summary>
                                     <div class="p-2 border-t border-leaf-200 bg-white text-xs">
-                                        <strong>S = Scholarship ($):</strong><br>
-                                        1.5S - 0.5S &ge; 800 + 200 &rarr; <strong>S &ge; 1000</strong><br>
-                                        <em>Win a scholarship valued at $1,000 or more!</em>
+                                        <ul class="list-disc pl-4 space-y-1">
+                                            <li><strong>Scenario:</strong> Compare the scholarship value with the $1,000 target.</li>
+                                            <li><strong>Variable:</strong> S is the scholarship value in dollars.</li>
+                                            <li><strong>Variable terms:</strong> 2.5S means 2.5 times S; 1.5S means 1.5 times S.</li>
+                                            <li><strong>Constants:</strong> -250 subtracts $250 from the first estimate; +750 adds $750 to the comparison estimate. Neither changes with S.</li>
+                                            <li><strong>Sign:</strong> &ge; means the first estimate must be greater than or equal to the second.</li>
+                                            <li><strong>Solving:</strong>
+                                                <ul class="list-[circle] pl-4 space-y-0.5">
+                                                    <li>Subtract 1.5S from both sides: S - 250 &ge; 750.</li>
+                                                    <li>Add 250 to both sides: S &ge; 1,000.</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Result:</strong> The model requires a scholarship worth at least $1,000.</li>
+                                        </ul>
                                     </div>
                                 </details>
                             </div>
@@ -447,13 +584,25 @@
                     <p class="text-earth-700 text-sm mb-4 flex-grow">Unpredictable rains heavily affected our collection schedule in the fall. We adapted by buying waterproof gear.</p>
                     <details class="group bg-earth-50 rounded-xl border border-earth-200 shadow-sm overflow-hidden text-left mt-auto">
                         <summary class="flex justify-between items-center cursor-pointer p-3 bg-earth-100 hover:bg-earth-200 transition">
-                            <span class="font-mono text-xs text-earth-900 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Rainy days</span>4R + 10 &ge; 2R + 30</span>
+                            <span class="font-mono text-xs text-earth-900 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Rainy days</span>5R + 8 &ge; 3R + 28</span>
                             <svg class="w-4 h-4 text-earth-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="p-3 text-xs text-earth-800 bg-white border-t border-earth-200">
-                            <strong>R = Rainy Days:</strong><br>
-                            4R - 2R &ge; 30 - 10 &rarr; 2R &ge; 20 &rarr; <strong>R &ge; 10</strong><br>
-                            <em>We survived over 10 consecutive rain-out days by shifting to indoor fiber processing.</em>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li><strong>Scenario:</strong> Compare rainy-day disruption with the weather plan's buffer.</li>
+                                <li><strong>Variable:</strong> R is the number of rainy days.</li>
+                                <li><strong>Variable terms:</strong> 5R means 5 times R; 3R means 3 times R.</li>
+                                <li><strong>Constants:</strong> +8 adds an assumed 8-day allowance to the first estimate; +28 adds a 28-day buffer to the comparison. Neither changes with R.</li>
+                                <li><strong>Sign:</strong> &ge; means the first estimate must be greater than or equal to the second.</li>
+                                <li><strong>Solving:</strong>
+                                    <ul class="list-[circle] pl-4 space-y-0.5">
+                                        <li>Subtract 3R from both sides: 2R + 8 &ge; 28.</li>
+                                        <li>Subtract 8 from both sides: 2R &ge; 20.</li>
+                                        <li>Divide both sides by 2: <strong>R &ge; 10.</strong></li>
+                                    </ul>
+                                </li>
+                                <li><strong>Result:</strong> The plan allows for at least 10 rainy days.</li>
+                            </ul>
                         </div>
                     </details>
                 </div>
@@ -464,13 +613,25 @@
                     <p class="text-earth-700 text-sm mb-4 flex-grow">Initial logistics costs threatened our margins. We solved this by partnering with local, carbon-neutral couriers.</p>
                     <details class="group bg-earth-50 rounded-xl border border-earth-200 shadow-sm overflow-hidden text-left mt-auto">
                         <summary class="flex justify-between items-center cursor-pointer p-3 bg-earth-100 hover:bg-earth-200 transition">
-                            <span class="font-mono text-xs text-earth-900 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Shipping costs</span>5C - 500 &le; 3C + 1500</span>
+                            <span class="font-mono text-xs text-earth-900 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Shipping costs</span>6C - 400 &le; 3C + 1100</span>
                             <svg class="w-4 h-4 text-earth-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="p-3 text-xs text-earth-800 bg-white border-t border-earth-200">
-                            <strong>C = Shipping Costs ($):</strong><br>
-                            2C &le; 2000 &rarr; <strong>C &le; 1000</strong><br>
-                            <em>We successfully negotiated to keep monthly local shipping costs strictly under $1,000.</em>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li><strong>Scenario:</strong> Compare monthly shipping costs with the courier budget.</li>
+                                <li><strong>Variable:</strong> C is monthly shipping cost in dollars.</li>
+                                <li><strong>Variable terms:</strong> 6C means 6 times C; 3C means 3 times C.</li>
+                                <li><strong>Constants:</strong> -400 subtracts a $400 shipping credit from the first estimate; +1,100 adds the comparison budget's allowance. Neither changes with C.</li>
+                                <li><strong>Sign:</strong> &le; means the first estimate is less than or equal to the second.</li>
+                                <li><strong>Solving:</strong>
+                                    <ul class="list-[circle] pl-4 space-y-0.5">
+                                        <li>Subtract 3C from both sides: 3C - 400 &le; 1,100.</li>
+                                        <li>Add 400 to both sides: 3C &le; 1,500.</li>
+                                        <li>Divide both sides by 3: <strong>C &le; 500.</strong></li>
+                                    </ul>
+                                </li>
+                                <li><strong>Result:</strong> The modeled monthly cost is at most $500.</li>
+                            </ul>
                         </div>
                     </details>
                 </div>
@@ -481,13 +642,25 @@
                     <p class="text-earth-700 text-sm mb-4 flex-grow">Our early leaf paper was too brittle. Our engineers went back to the drawing board repeatedly.</p>
                     <details class="group bg-earth-50 rounded-xl border border-earth-200 shadow-sm overflow-hidden text-left mt-auto">
                         <summary class="flex justify-between items-center cursor-pointer p-3 bg-earth-100 hover:bg-earth-200 transition">
-                            <span class="font-mono text-xs text-earth-900 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Prototype failures</span>3P + 15 &lt; P + 35</span>
+                            <span class="font-mono text-xs text-earth-900 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Prototype failures</span>4P + 6 &lt; 2P + 26</span>
                             <svg class="w-4 h-4 text-earth-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="p-3 text-xs text-earth-800 bg-white border-t border-earth-200">
-                            <strong>P = Prototype Failures:</strong><br>
-                            2P &lt; 20 &rarr; <strong>P &lt; 10</strong><br>
-                            <em>We achieved structural integrity in under 10 iterations!</em>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li><strong>Scenario:</strong> Compare prototype failures with the limit for a successful design.</li>
+                                <li><strong>Variable:</strong> P is the number of failed prototype iterations.</li>
+                                <li><strong>Variable terms:</strong> 4P means 4 times P; 2P means 2 times P.</li>
+                                <li><strong>Constants:</strong> +6 adds six assumed failures to the first estimate; +26 adds the comparison limit's 26-failure starting count. Neither changes with P.</li>
+                                <li><strong>Sign:</strong> &lt; means the first estimate must be strictly less than the second.</li>
+                                <li><strong>Solving:</strong>
+                                    <ul class="list-[circle] pl-4 space-y-0.5">
+                                        <li>Subtract 2P from both sides: 2P + 6 &lt; 26.</li>
+                                        <li>Subtract 6 from both sides: 2P &lt; 20.</li>
+                                        <li>Divide both sides by 2: <strong>P &lt; 10.</strong></li>
+                                    </ul>
+                                </li>
+                                <li><strong>Result:</strong> The model requires fewer than 10 failed iterations.</li>
+                            </ul>
                         </div>
                     </details>
                 </div>
@@ -498,13 +671,25 @@
                     <p class="text-earth-700 text-sm mb-4 flex-grow">Industrial mechanical presses are expensive. We had to pitch to investors to afford our core machinery.</p>
                     <details class="group bg-earth-50 rounded-xl border border-earth-200 shadow-sm overflow-hidden text-left mt-auto">
                         <summary class="flex justify-between items-center cursor-pointer p-3 bg-earth-100 hover:bg-earth-200 transition">
-                            <span class="font-mono text-[11px] text-earth-900 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Funding raised</span>2F + 5000 &ge; 0.5F + 20000</span>
+                            <span class="font-mono text-[11px] text-earth-900 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Funding raised</span>3F + 6000 &ge; 1.5F + 21000</span>
                             <svg class="w-4 h-4 text-earth-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="p-3 text-xs text-earth-800 bg-white border-t border-earth-200">
-                            <strong>F = Funding Raised ($):</strong><br>
-                            1.5F &ge; 15000 &rarr; <strong>F &ge; 10000</strong><br>
-                            <em>Our community pitched in to help us secure the minimum $10,000 needed.</em>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li><strong>Scenario:</strong> Compare community funding with the press-equipment target.</li>
+                                <li><strong>Variable:</strong> F is funding raised in dollars.</li>
+                                <li><strong>Variable terms:</strong> 3F means 3 times F; 1.5F means 1.5 times F.</li>
+                                <li><strong>Constants:</strong> +6,000 adds assumed existing funds to the first total; +21,000 adds the target's starting amount. Neither changes with F.</li>
+                                <li><strong>Sign:</strong> &ge; means the first total must be greater than or equal to the target.</li>
+                                <li><strong>Solving:</strong>
+                                    <ul class="list-[circle] pl-4 space-y-0.5">
+                                        <li>Subtract 1.5F from both sides: 1.5F + 6,000 &ge; 21,000.</li>
+                                        <li>Subtract 6,000 from both sides: 1.5F &ge; 15,000.</li>
+                                        <li>Divide both sides by 1.5: <strong>F &ge; 10,000.</strong></li>
+                                    </ul>
+                                </li>
+                                <li><strong>Result:</strong> The model requires at least $10,000 in funding.</li>
+                            </ul>
                         </div>
                     </details>
                 </div>
@@ -515,13 +700,25 @@
                     <p class="text-earth-700 text-sm mb-4 flex-grow">Mapping out pickup routes for raw leaves took immense time. We optimized routes with custom software.</p>
                     <details class="group bg-earth-50 rounded-xl border border-earth-200 shadow-sm overflow-hidden text-left mt-auto">
                         <summary class="flex justify-between items-center cursor-pointer p-3 bg-earth-100 hover:bg-earth-200 transition">
-                            <span class="font-mono text-xs text-earth-900 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Delivery delays</span>6D - 30 &le; 2D + 50</span>
+                            <span class="font-mono text-xs text-earth-900 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Delivery delays</span>5D - 24 &le; 2D + 36</span>
                             <svg class="w-4 h-4 text-earth-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="p-3 text-xs text-earth-800 bg-white border-t border-earth-200">
-                            <strong>D = Delay (Hours):</strong><br>
-                            4D &le; 80 &rarr; <strong>D &le; 20</strong><br>
-                            <em>By utilizing our algorithm, total route delays are capped strictly under 20 hours a month.</em>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li><strong>Scenario:</strong> Compare monthly delivery delays with the route-planning limit.</li>
+                                <li><strong>Variable:</strong> D is delivery-delay hours per month.</li>
+                                <li><strong>Variable terms:</strong> 5D means 5 times D; 2D means 2 times D.</li>
+                                <li><strong>Constants:</strong> -24 subtracts a 24-hour route-planning credit from the first estimate; +36 adds an allowance to the comparison. Neither changes with D.</li>
+                                <li><strong>Sign:</strong> &le; means the first estimate is less than or equal to the second.</li>
+                                <li><strong>Solving:</strong>
+                                    <ul class="list-[circle] pl-4 space-y-0.5">
+                                        <li>Subtract 2D from both sides: 3D - 24 &le; 36.</li>
+                                        <li>Add 24 to both sides: 3D &le; 60.</li>
+                                        <li>Divide both sides by 3: <strong>D &le; 20.</strong></li>
+                                    </ul>
+                                </li>
+                                <li><strong>Result:</strong> The modeled delay is at most 20 hours per month.</li>
+                            </ul>
                         </div>
                     </details>
                 </div>
@@ -532,13 +729,25 @@
                     <p class="text-earth-700 text-sm mb-4 flex-grow">Keeping our presses in top shape takes regular upkeep. We schedule maintenance to keep production downtime manageable.</p>
                     <details class="group bg-earth-50 rounded-xl border border-earth-200 shadow-sm overflow-hidden text-left mt-auto">
                         <summary class="flex justify-between items-center cursor-pointer p-3 bg-earth-100 hover:bg-earth-200 transition">
-                            <span class="font-mono text-xs text-earth-900 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Maintenance hours</span>3H + 10 &le; H + 50</span>
+                            <span class="font-mono text-xs text-earth-900 font-semibold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Maintenance hours</span>4H + 12 &le; 2H + 52</span>
                             <svg class="w-4 h-4 text-earth-600 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="p-3 text-xs text-earth-800 bg-white border-t border-earth-200">
-                            <strong>H = Maintenance Hours per Month:</strong><br>
-                            2H &le; 40 &rarr; <strong>H &le; 20</strong><br>
-                            <em>Regular servicing keeps monthly production downtime to 20 hours or less.</em>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li><strong>Scenario:</strong> Compare monthly press-maintenance time with the downtime cap.</li>
+                                <li><strong>Variable:</strong> H is maintenance hours per month.</li>
+                                <li><strong>Variable terms:</strong> 4H means 4 times H; 2H means 2 times H.</li>
+                                <li><strong>Constants:</strong> +12 adds a 12-hour allowance to the first estimate; +52 adds the comparison cap's 52-hour starting amount. Neither changes with H.</li>
+                                <li><strong>Sign:</strong> &le; means the first total must be less than or equal to the cap.</li>
+                                <li><strong>Solving:</strong>
+                                    <ul class="list-[circle] pl-4 space-y-0.5">
+                                        <li>Subtract 2H from both sides: 2H + 12 &le; 52.</li>
+                                        <li>Subtract 12 from both sides: 2H &le; 40.</li>
+                                        <li>Divide both sides by 2: <strong>H &le; 20.</strong></li>
+                                    </ul>
+                                </li>
+                                <li><strong>Result:</strong> The model allows at most 20 maintenance hours per month.</li>
+                            </ul>
                         </div>
                     </details>
                 </div>
@@ -568,13 +777,25 @@
                     <div class="absolute -bottom-6 -right-2 md:-right-6 bg-leaf-900 border-2 border-leaf-500 p-3 rounded-xl shadow-xl transform rotate-2 md:rotate-3 max-w-xs w-full">
                         <details class="group w-full">
                             <summary class="flex justify-between items-center cursor-pointer font-mono text-leaf-100 text-xs md:text-sm font-bold list-none">
-                                <span><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Waste diverted</span>4W - 500 &gt; 2W + 1500</span>
+                                <span><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Waste diverted</span>5W - 750 &gt; 2W + 2250</span>
                                 <svg class="w-4 h-4 ml-2 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </summary>
                             <div class="mt-2 text-xs text-leaf-200 font-sans border-t border-leaf-700 pt-2">
-                                <strong>W = Waste Diverted (lbs)</strong><br>
-                                2W &gt; 2000 &rarr; <strong>W &gt; 1000</strong><br>
-                                Over 1,000 lbs of landfill waste reduced weekly!
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li><strong>Scenario:</strong> Compare two weekly estimates of landfill waste diverted.</li>
+                                    <li><strong>Variable:</strong> W is waste diverted per week, in pounds.</li>
+                                    <li><strong>Variable terms:</strong> 5W means 5 times W; 2W means 2 times W.</li>
+                                    <li><strong>Constants:</strong> -750 subtracts 750 lb from the first estimate; +2,250 adds the comparison target's starting amount. Neither changes with W.</li>
+                                    <li><strong>Sign:</strong> &gt; means the first estimate must be strictly greater than the target.</li>
+                                    <li><strong>Solving:</strong>
+                                        <ul class="list-[circle] pl-4 space-y-0.5">
+                                            <li>Subtract 2W from both sides: 3W - 750 &gt; 2,250.</li>
+                                            <li>Add 750 to both sides: 3W &gt; 3,000.</li>
+                                            <li>Divide both sides by 3: <strong>W &gt; 1,000.</strong></li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Result:</strong> The model requires diverting more than 1,000 lb per week.</li>
+                                </ul>
                             </div>
                         </details>
                     </div>
@@ -586,13 +807,25 @@
                     <div class="absolute -top-6 -left-2 md:-left-6 bg-earth-800 border-2 border-earth-500 p-3 rounded-xl shadow-xl transform -rotate-2 md:-rotate-3 max-w-xs w-full">
                         <details class="group w-full">
                             <summary class="flex justify-between items-center cursor-pointer font-mono text-earth-100 text-xs md:text-sm font-bold list-none">
-                                <span><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Biodiversity harm</span>4B + 10 &lt; 2B + 10</span>
+                                <span><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Biodiversity harm</span>5B + 12 &le; 3B + 48</span>
                                 <svg class="w-4 h-4 ml-2 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </summary>
                             <div class="mt-2 text-xs text-earth-300 font-sans border-t border-earth-600 pt-2">
-                                <strong>B = Biodiversity Harm</strong><br>
-                                2B &lt; 0 &rarr; <strong>B &lt; 0</strong><br>
-                                We deal ZERO harm to local ecosystems.
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li><strong>Scenario:</strong> Compare biodiversity disturbance with an acceptable limit.</li>
+                                    <li><strong>Variable:</strong> B is disturbance in index points.</li>
+                                    <li><strong>Variable terms:</strong> 5B means 5 times B; 3B means 3 times B.</li>
+                                    <li><strong>Constants:</strong> +12 adds the first estimate's starting disturbance; +48 adds the comparison limit's starting amount. Neither changes with B.</li>
+                                    <li><strong>Sign:</strong> &le; means the first estimate must be less than or equal to the limit.</li>
+                                    <li><strong>Solving:</strong>
+                                        <ul class="list-[circle] pl-4 space-y-0.5">
+                                            <li>Subtract 3B from both sides: 2B + 12 &le; 48.</li>
+                                            <li>Subtract 12 from both sides: 2B &le; 36.</li>
+                                            <li>Divide both sides by 2: <strong>B &le; 18.</strong></li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Result:</strong> The model allows disturbance of at most 18 index points.</li>
+                                </ul>
                             </div>
                         </details>
                     </div>
@@ -651,13 +884,25 @@
                
                 <details class="group relative z-10 w-full max-w-[300px]">
                     <summary class="flex justify-between items-center cursor-pointer font-mono text-leaf-700 bg-white px-3 py-1.5 rounded-lg shadow-sm border border-earth-200 list-none">
-                        <span class="text-xs font-bold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Total impact score</span>5I - 10 &gt; 3I + 50</span>
+                        <span class="text-xs font-bold"><span class="font-sans text-[10px] uppercase tracking-wide opacity-75 mr-2">Total impact score</span>6I - 25 &gt; 3I + 65</span>
                         <svg class="w-3 h-3 ml-2 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </summary>
                     <div class="absolute bottom-full left-0 mb-2 w-full p-2 bg-white rounded shadow-lg border border-earth-200 text-xs">
-                        <strong>I = Total Impact Score</strong><br>
-                        2I &gt; 60 &rarr; <strong>I &gt; 30</strong><br>
-                        Our composite index is soaring!
+                        <ul class="list-disc pl-4 space-y-1">
+                            <li><strong>Scenario:</strong> Compare two calculations of the overall impact score.</li>
+                            <li><strong>Variable:</strong> I is the total impact score in points.</li>
+                            <li><strong>Variable terms:</strong> 6I means 6 times I; 3I means 3 times I.</li>
+                            <li><strong>Constants:</strong> -25 subtracts 25 points from the first calculation; +65 adds a 65-point benchmark to the second. Neither changes with I.</li>
+                            <li><strong>Sign:</strong> &gt; means the first result must be strictly greater than the second.</li>
+                            <li><strong>Solving:</strong>
+                                <ul class="list-[circle] pl-4 space-y-0.5">
+                                    <li>Subtract 3I from both sides: 3I - 25 &gt; 65.</li>
+                                    <li>Add 25 to both sides: 3I &gt; 90.</li>
+                                    <li>Divide both sides by 3: <strong>I &gt; 30.</strong></li>
+                                </ul>
+                            </li>
+                            <li><strong>Result:</strong> The model requires a total impact score above 30 points.</li>
+                        </ul>
                     </div>
                 </details>
 
@@ -991,3 +1236,4 @@
     </script>
 </body>
 </html>
+
